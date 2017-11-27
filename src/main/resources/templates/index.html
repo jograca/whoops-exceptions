@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WHOOPS!</title>
+</head>
+<body>
+
+	<form method="post" action="/handle-error">
+		<label> Put some text in here: <input type="text"
+			name="message">
+		</label>
+		<button>Submit</button>
+	</form>
+	
+	<br>
+	<br>
+	
+	<div>
+	{{#mangledMessage}}
+		Your mangled message is: {{ mangledMessage }}
+	{{/mangledMessage}}
+	</div>
+	
+	<br>
+	<br>
+	
+	<div>
+	{{#error}}
+		Your error is: {{ error }}
+	{{/error}}
+	</div>
+	
+</body>
+</html>
